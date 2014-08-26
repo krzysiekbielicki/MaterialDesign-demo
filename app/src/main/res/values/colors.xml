@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="truck_red">#ffde000d</color>
+    <color name="truck_red_dark">#ff6e000a</color>
+    <color name="white">#ffffffff</color>
+    <color name="truck_blue">#ff0057A8</color>
+</resources>

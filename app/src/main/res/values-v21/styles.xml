@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BoysTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/truck_red</item>
+        <item name="android:colorPrimaryDark">@color/truck_red_dark</item>
+        <item name="android:colorAccent">@color/truck_green</item>
+        <item name="android:textColorPrimary">#ff000000</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:navigationBarColor">@color/truck_blue</item>
+        <item name="android:statusBarColor">@color/truck_red_dark</item>
+        <item name="android:popupMenuStyle">@style/PopupMenuStyle</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/move_image</item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/move_image</item>
+    </style>
+
+    <style name="PopupMenuStyle" parent="@android:style/Widget.Material.ListPopupWindow">
+        <item name="android:popupBackground">@color/truck_red</item>
+    </style>
+</resources>
