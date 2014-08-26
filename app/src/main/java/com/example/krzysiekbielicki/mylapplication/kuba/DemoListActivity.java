@@ -24,6 +24,11 @@ public class DemoListActivity extends Activity {
        startActivity(HelloMaterialDesignActivity.class);
     }
 
+    @OnClick(R.id.demo_theme_customization)
+    protected void onDemoThemeCustomizationButtonClick() {
+        startActivity(ThemeCustomizationActivity.class);
+    }
+
     private void startActivity(Class<? extends Activity> activityClass) {
         startActivity(new Intent(this, activityClass));
     }

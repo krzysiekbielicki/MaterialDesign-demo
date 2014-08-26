@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="SimpleTheme" parent="android:Theme.Material.Light">
+    <style name="SimpleTheme" parent="android:Theme.Material">
         <!-- theme customizations -->
+    </style>
+
+    <style name="ColorfulTheme" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/truck_red</item>
+        <item name="android:colorPrimaryDark">@color/truck_red_dark</item>
+        <item name="android:colorAccent">@color/truck_green</item>
+
+        <item name="android:statusBarColor">@color/pink</item>
+        <item name="android:navigationBarColor">@color/truck_blue</item>
+
+        <item name="android:textColorPrimary">#ff000000</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
     </style>
 
     <style name="BoysTheme" parent="android:Theme.Material.Light.DarkActionBar">
