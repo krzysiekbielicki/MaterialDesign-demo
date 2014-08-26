@@ -18,16 +18,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailsActivity" />
-        <activity
-            android:name=".kuba.HelloMaterialDesignActivity"
-            android:label="Hello Material Design"
-            android:theme="@style/SimpleTheme">
+        <activity android:name=".kuba.DemoListActivity"
+            android:label="Material Demos List">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".kuba.HelloMaterialDesignActivity"
+            android:label="Hello Material Design"
+            android:theme="@style/SimpleTheme" />
     </application>
 
 </manifest>
