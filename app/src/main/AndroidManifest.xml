@@ -10,13 +10,7 @@
         <activity
             android:name=".MainActivity"
             android:icon="@drawable/ic_launcher"
-            android:label="@string/app_name">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+            android:label="@string/app_name"/>
         <activity android:name=".DetailsActivity" />
         <activity
             android:name=".kuba.DemoListActivity"
@@ -35,6 +29,13 @@
             android:name=".kuba.ThemeCustomizationActivity"
             android:label="Theme customization"
             android:theme="@style/ColorfulTheme" />
+
+        <activity android:name=".kuba.TwoThemesActivity"
+                  android:label="Two themes"
+                  android:theme="@android:style/android:Theme.Material"/>
+
+        <activity android:name=".kuba.recyclerview.RecyclerViewActivity"
+                  android:label="RecyclerView"/>
     </application>
 
 </manifest>

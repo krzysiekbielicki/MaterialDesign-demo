@@ -20,5 +20,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Theme customization"/>
+
+        <Button
+            android:id="@+id/demo_two_themes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Two themes"/>
+
+        <Button
+            android:id="@+id/demo_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recycler View"/>
     </LinearLayout>
 </ScrollView>

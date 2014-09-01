@@ -5,9 +5,12 @@
     </style>
 
     <style name="ColorfulTheme" parent="android:Theme.Material.Light">
-        <item name="android:colorPrimary">@color/truck_red</item>
-        <item name="android:colorPrimaryDark">@color/truck_red_dark</item>
-        <item name="android:colorAccent">@color/truck_green</item>
+        <!--   your app's branding color (for the app bar) -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <!--   darker variant of colorPrimary (for status bar, contextual app bars) -->
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="android:colorAccent">@color/accent</item>
 
         <item name="android:statusBarColor">@color/pink</item>
         <item name="android:navigationBarColor">@color/truck_blue</item>

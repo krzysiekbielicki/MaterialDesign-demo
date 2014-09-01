@@ -5,4 +5,13 @@
     <color name="white">#ffffffff</color>
     <color name="truck_blue">#ff0057A8</color>
     <color name="pink">#fff910fd</color>
+
+    <color name="deep_orange_500">#ff5722</color>
+    <color name="deep_orange_900">#bf360c</color>
+    <color name="light_green_a700">#64dd17</color>
+    <color name="grey_500">#9e9e9e</color>
+
+    <color name="primary">@color/deep_orange_500</color>
+    <color name="primary_dark">@color/deep_orange_900</color>
+    <color name="accent">@color/light_green_a700</color>
 </resources>

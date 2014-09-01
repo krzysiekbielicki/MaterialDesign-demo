@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.krzysiekbielicki.mylapplication.R;
+import com.example.krzysiekbielicki.mylapplication.kuba.recyclerview.RecyclerViewActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -28,6 +29,16 @@ public class DemoListActivity extends Activity {
     protected void onDemoThemeCustomizationButtonClick() {
         startActivity(ThemeCustomizationActivity.class);
     }
+
+	@OnClick(R.id.demo_two_themes)
+	protected void onDemoTwoThemesButtonClick() {
+		startActivity(TwoThemesActivity.class);
+	}
+
+	@OnClick(R.id.demo_recycler_view)
+	protected void onDemoRecyclerViewThemesButtonClick() {
+		startActivity(RecyclerViewActivity.class);
+	}
 
     private void startActivity(Class<? extends Activity> activityClass) {
         startActivity(new Intent(this, activityClass));
