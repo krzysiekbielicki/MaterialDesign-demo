@@ -46,6 +46,7 @@ public class RecyclerViewActivity extends Activity implements RecyclerViewClickL
 		recyclerView.setAdapter(adapter);
 
 		recyclerView.setItemAnimator(new DefaultItemAnimator());
+		recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL_LIST));
 	}
 
 	@OnClick(R.id.addItem)
