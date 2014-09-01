@@ -16,6 +16,7 @@
 package com.example.krzysiekbielicki.mylapplication.kuba.recyclerview;
 
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v4.view.ViewPropertyAnimatorListener;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
@@ -123,17 +124,26 @@ public class BaseItemAnimator extends RecyclerView.ItemAnimator {
 	private void animateRemoveImpl(final ViewHolder holder) {
 		final View view = holder.itemView;
 		ViewCompat.animate(view).cancel();
-		ViewCompat.animate(view).setDuration(getRemoveDuration()).
-				alpha(0).setListener(new VpaListenerAdapter() {
-			@Override
-			public void onAnimationEnd(View view) {
-				ViewCompat.setAlpha(view, 1);
-				dispatchRemoveFinished(holder);
-				mRemoveAnimations.remove(holder);
-				dispatchFinishedWhenDone();
-			}
-		}).start();
+		prepareRemoveAnimator(ViewCompat.animate(view))
+				.setDuration(getRemoveDuration())
+				.setListener(new VpaListenerAdapter() {
+					@Override
+					public void onAnimationEnd(View view) {
+						resetViewAfterRemoveAnimation(view);
+						dispatchRemoveFinished(holder);
+						mRemoveAnimations.remove(holder);
+						dispatchFinishedWhenDone();
+					}
+				}).start();
 		mRemoveAnimations.add(holder);
+	}
+
+	protected ViewPropertyAnimatorCompat prepareRemoveAnimator(ViewPropertyAnimatorCompat removeAnimator) {
+		return removeAnimator.alpha(0);
+	}
+
+	protected void resetViewAfterRemoveAnimation(View view) {
+		ViewCompat.setAlpha(view, 1);
 	}
 
 	@Override
@@ -146,8 +156,9 @@ public class BaseItemAnimator extends RecyclerView.ItemAnimator {
 	private void animateAddImpl(final ViewHolder holder) {
 		final View view = holder.itemView;
 		ViewCompat.animate(view).cancel();
-		ViewCompat.animate(view).alpha(1).setDuration(getAddDuration()).
-				setListener(new VpaListenerAdapter() {
+		prepareAddAnimator(ViewCompat.animate(view))
+				.setDuration(getAddDuration())
+				.setListener(new VpaListenerAdapter() {
 					@Override
 					public void onAnimationCancel(View view) {
 						ViewCompat.setAlpha(view, 1);
@@ -161,6 +172,10 @@ public class BaseItemAnimator extends RecyclerView.ItemAnimator {
 					}
 				}).start();
 		mAddAnimations.add(holder);
+	}
+
+	protected ViewPropertyAnimatorCompat prepareAddAnimator(ViewPropertyAnimatorCompat addAnimator) {
+		return addAnimator.alpha(1);
 	}
 
 	@Override

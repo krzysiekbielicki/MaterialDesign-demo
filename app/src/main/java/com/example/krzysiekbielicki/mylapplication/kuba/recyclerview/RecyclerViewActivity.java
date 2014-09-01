@@ -11,7 +11,9 @@ import com.example.krzysiekbielicki.mylapplication.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
+import me.tatarka.recyclerviewtest.itemanimator.SlideInFromLeftItemAnimator;
 
 
 public class RecyclerViewActivity extends Activity implements RecyclerViewClickListener<ExampleAdapter.ViewHolder> {
@@ -45,7 +47,6 @@ public class RecyclerViewActivity extends Activity implements RecyclerViewClickL
 		adapter.setListener(this);
 		recyclerView.setAdapter(adapter);
 
-		recyclerView.setItemAnimator(new DefaultItemAnimator());
 		recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL_LIST));
 	}
 
@@ -58,6 +59,15 @@ public class RecyclerViewActivity extends Activity implements RecyclerViewClickL
 	void onRemoveItemButtonClick() {
 		if (adapter.getItemCount() >= 0) {
 			adapter.remove(0);
+		}
+	}
+
+	@OnCheckedChanged(R.id.itemAnimatorType)
+	void onAnimatorTypeCheckedChanged(boolean useCustom) {
+		if (useCustom) {
+			recyclerView.setItemAnimator(new SlideInFromLeftItemAnimator(recyclerView));
+		} else {
+			recyclerView.setItemAnimator(new DefaultItemAnimator());
 		}
 	}
 

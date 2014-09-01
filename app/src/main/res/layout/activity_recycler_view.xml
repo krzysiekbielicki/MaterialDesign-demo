@@ -9,17 +9,25 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <ToggleButton
+            android:id="@+id/itemAnimatorType"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textOff="Default animations"
+            android:textOn="Custom animations"/>
+
         <Button
             android:id="@+id/addItem"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Add item"/>
 
         <Button
             android:id="@+id/removeItem"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Remove item"/>
 
