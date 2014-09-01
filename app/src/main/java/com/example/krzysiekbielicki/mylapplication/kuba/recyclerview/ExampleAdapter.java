@@ -10,17 +10,19 @@ import android.widget.TextView;
 
 import com.example.krzysiekbielicki.mylapplication.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ViewHolder> {
+public class ExampleAdapter extends BaseRecyclerViewAdapter<String, ExampleAdapter.ViewHolder> {
 	private final LayoutInflater layoutInflater;
-	private String[] dataset;
 	private RecyclerViewClickListener<ViewHolder> listener;
 
 	public ExampleAdapter(Context context, String[] dataset) {
+		super(new ArrayList<String>(Arrays.asList(dataset)));
 		layoutInflater = LayoutInflater.from(context);
-		this.dataset = dataset;
 	}
 
 	@Override
@@ -33,12 +35,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ViewHold
 	@Override
 	public void onBindViewHolder(ViewHolder viewHolder, int position) {
 		viewHolder.image.setImageResource(R.drawable.ic_launcher);
-		viewHolder.text.setText(dataset[position]);
-	}
-
-	@Override
-	public int getItemCount() {
-		return dataset.length;
+		viewHolder.text.setText(getItem(position));
 	}
 
 	public void setListener(RecyclerViewClickListener<ViewHolder> listener) {

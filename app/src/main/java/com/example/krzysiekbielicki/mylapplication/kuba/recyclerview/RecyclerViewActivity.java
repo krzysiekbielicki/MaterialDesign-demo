@@ -2,6 +2,7 @@ package com.example.krzysiekbielicki.mylapplication.kuba.recyclerview;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
@@ -10,6 +11,7 @@ import com.example.krzysiekbielicki.mylapplication.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 
 public class RecyclerViewActivity extends Activity implements RecyclerViewClickListener<ExampleAdapter.ViewHolder> {
@@ -36,12 +38,26 @@ public class RecyclerViewActivity extends Activity implements RecyclerViewClickL
 		// do not change the size of the RecyclerView
 		recyclerView.setHasFixedSize(true);
 
-		RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true);
+		RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
 		recyclerView.setLayoutManager(layoutManager);
 
 		adapter = new ExampleAdapter(this, LOREM_IPSUM.split(" "));
 		adapter.setListener(this);
 		recyclerView.setAdapter(adapter);
+
+		recyclerView.setItemAnimator(new DefaultItemAnimator());
+	}
+
+	@OnClick(R.id.addItem)
+	void onAddItemButtonClick() {
+		adapter.add("Item " + adapter.getItemCount(), 1);
+	}
+
+	@OnClick(R.id.removeItem)
+	void onRemoveItemButtonClick() {
+		if (adapter.getItemCount() >= 0) {
+			adapter.remove(0);
+		}
 	}
 
 	@Override
