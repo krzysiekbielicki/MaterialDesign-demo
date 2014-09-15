@@ -19,15 +19,18 @@ import butterknife.InjectView;
 public class ExampleAdapter extends BaseRecyclerViewAdapter<String, ExampleAdapter.ViewHolder> {
 	private final LayoutInflater layoutInflater;
 	private RecyclerViewClickListener<ViewHolder> listener;
+    private int layoutResourceId;
 
-	public ExampleAdapter(Context context, String[] dataset) {
+	public ExampleAdapter(Context context, String[] dataset, boolean useCardLayout) {
 		super(new ArrayList<String>(Arrays.asList(dataset)));
 		layoutInflater = LayoutInflater.from(context);
+
+        layoutResourceId = useCardLayout ? R.layout.card_collection_item : R.layout.collection_item;
 	}
 
 	@Override
 	public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
-		View view = layoutInflater.inflate(R.layout.collection_item, parent, false);
+		View view = layoutInflater.inflate(layoutResourceId, parent, false);
 		view.setClipToOutline(true);
 		return new ViewHolder(view);
 	}

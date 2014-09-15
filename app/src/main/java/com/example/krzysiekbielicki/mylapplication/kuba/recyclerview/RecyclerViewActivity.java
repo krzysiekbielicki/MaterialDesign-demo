@@ -1,6 +1,8 @@
 package com.example.krzysiekbielicki.mylapplication.kuba.recyclerview;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,10 +26,17 @@ public class RecyclerViewActivity extends Activity implements RecyclerViewClickL
 			"with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing " +
 			"software like Aldus PageMaker including versions of Lorem Ipsum.";
 
+    private static final String EXTRA_USE_CARD_LAYOUT = "useCardLayout";
+
 	@InjectView(R.id.recyclerView)
 	RecyclerView recyclerView;
 
 	private ExampleAdapter adapter;
+
+    public static Intent createIntent(Context context, boolean useCardLayout) {
+        return new Intent(context, RecyclerViewActivity.class)
+                .putExtra(EXTRA_USE_CARD_LAYOUT, useCardLayout);
+    }
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +52,7 @@ public class RecyclerViewActivity extends Activity implements RecyclerViewClickL
 		RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
 		recyclerView.setLayoutManager(layoutManager);
 
-		adapter = new ExampleAdapter(this, LOREM_IPSUM.split(" "));
+		adapter = new ExampleAdapter(this, LOREM_IPSUM.split(" "), getIntent().getBooleanExtra(EXTRA_USE_CARD_LAYOUT, false));
 		adapter.setListener(this);
 		recyclerView.setAdapter(adapter);
 

@@ -40,6 +40,11 @@ public class DemoListActivity extends Activity {
 		startActivity(RecyclerViewActivity.class);
 	}
 
+    @OnClick(R.id.demo_card_view)
+    protected void onDemoCardViewThemesButtonClick() {
+        startActivity(RecyclerViewActivity.createIntent(this, true));
+    }
+
     private void startActivity(Class<? extends Activity> activityClass) {
         startActivity(new Intent(this, activityClass));
     }
