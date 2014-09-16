@@ -56,5 +56,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Touch Feedback"/>
+
+        <Button
+            android:id="@+id/demo_reveal_effect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reveal Effect"/>
     </LinearLayout>
 </ScrollView>

@@ -63,4 +63,9 @@ public class DemoListActivity extends Activity {
     protected void onDemoTouchFeedbackButtonClick() {
         startActivity(TouchFeedback.class);
     }
+
+	@OnClick(R.id.demo_reveal_effect)
+	protected void onDemoRevealEffectButtonClick() {
+		startActivity(RevealEffectActivity.class);
+	}
 }

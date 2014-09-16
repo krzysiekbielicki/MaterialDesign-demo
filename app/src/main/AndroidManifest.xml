@@ -42,6 +42,9 @@
 
         <activity android:name=".kuba.TouchFeedback"
             android:label="Touch feedback"/>
+
+        <activity android:name=".kuba.RevealEffectActivity"
+                  android:label="Reveal Effect"/>
     </application>
 
 </manifest>
