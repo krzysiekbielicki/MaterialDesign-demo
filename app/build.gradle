@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.krzysiekbielicki.mylapplication"
-        minSdkVersion 'L'
+        minSdkVersion 'L' // not always needed
         targetSdkVersion 'L'
         versionCode 1
         versionName "1.0"
