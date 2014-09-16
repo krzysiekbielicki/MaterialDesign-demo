@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="SimpleTheme" parent="android:Theme.Material">
+    <!-- res/values/styles.xml or es/values-v21/styles.xml -->
+    <style name="SimpleTheme" parent="android:Theme.Material.Light">
         <!-- theme customizations -->
     </style>
 
