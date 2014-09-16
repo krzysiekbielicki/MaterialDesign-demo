@@ -36,6 +36,9 @@
 
         <activity android:name=".kuba.recyclerview.RecyclerViewActivity"
                   android:label="RecyclerView"/>
+
+        <activity android:name=".kuba.OutlinesActivity"
+            android:label="Outlines"/>
     </application>
 
 </manifest>

@@ -53,4 +53,9 @@ public class DemoListActivity extends Activity {
     private void startActivity(Class<? extends Activity> activityClass) {
         startActivity(new Intent(this, activityClass));
     }
+
+    @OnClick(R.id.demo_outlines)
+    protected void onDemoOutlinesButtonClick() {
+        startActivity(OutlinesActivity.class);
+    }
 }
