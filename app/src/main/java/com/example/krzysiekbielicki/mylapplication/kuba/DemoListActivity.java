@@ -58,4 +58,9 @@ public class DemoListActivity extends Activity {
     protected void onDemoOutlinesButtonClick() {
         startActivity(OutlinesActivity.class);
     }
+
+    @OnClick(R.id.demo_touch_feedback)
+    protected void onDemoTouchFeedbackButtonClick() {
+        startActivity(TouchFeedback.class);
+    }
 }

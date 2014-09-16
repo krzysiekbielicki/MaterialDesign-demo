@@ -39,4 +39,8 @@
     <style name="PopupMenuStyle" parent="@android:style/Widget.Material.ListPopupWindow">
         <item name="android:popupBackground">@color/truck_red</item>
     </style>
+
+    <style name="OrangeHighlightTheme" parent="SimpleTheme">
+        <item name="android:colorControlHighlight">@color/deep_orange_900</item>
+    </style>
 </resources>

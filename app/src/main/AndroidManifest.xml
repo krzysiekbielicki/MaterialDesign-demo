@@ -39,6 +39,9 @@
 
         <activity android:name=".kuba.OutlinesActivity"
             android:label="Outlines"/>
+
+        <activity android:name=".kuba.TouchFeedback"
+            android:label="Touch feedback"/>
     </application>
 
 </manifest>
