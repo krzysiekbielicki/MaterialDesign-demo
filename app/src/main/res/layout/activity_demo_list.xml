@@ -34,6 +34,12 @@
             android:text="Recycler View"/>
 
         <Button
+            android:id="@+id/demo_custom_layout_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom Layout Manager"/>
+
+        <Button
             android:id="@+id/demo_card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:id="@+id/cardView"
              android:layout_width="match_parent"
@@ -6,12 +6,14 @@
              android:padding="10dp"
              android:background="?android:attr/selectableItemBackground"
              android:layout_margin="30dp"
-             android:clickable="true">
+             android:clickable="true"
+             android:orientation="vertical">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:src="@drawable/ic_launcher"
         android:scaleType="centerInside"/>
 
@@ -21,5 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Some text"
-        android:layout_gravity="bottom"/>
-</FrameLayout>
+        android:layout_gravity="bottom"
+        android:lines="1"/>
+</LinearLayout>

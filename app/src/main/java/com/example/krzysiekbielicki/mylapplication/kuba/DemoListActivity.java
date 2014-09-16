@@ -40,9 +40,14 @@ public class DemoListActivity extends Activity {
 		startActivity(RecyclerViewActivity.class);
 	}
 
+    @OnClick(R.id.demo_custom_layout_manager)
+    protected void onDemoCustomLayoutManagerButtonClick() {
+        startActivity(RecyclerViewActivity.createIntent(this, true, false));
+    }
+
     @OnClick(R.id.demo_card_view)
-    protected void onDemoCardViewThemesButtonClick() {
-        startActivity(RecyclerViewActivity.createIntent(this, true));
+    protected void onDemoCardViewButtonClick() {
+        startActivity(RecyclerViewActivity.createIntent(this, false, true));
     }
 
     private void startActivity(Class<? extends Activity> activityClass) {
