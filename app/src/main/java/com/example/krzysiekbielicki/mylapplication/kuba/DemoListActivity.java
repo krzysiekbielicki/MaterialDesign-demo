@@ -74,4 +74,9 @@ public class DemoListActivity extends Activity {
     protected void onDemoTransitionsButtonClick() {
         startActivity(TransitionsSmallGalleryActivity.class);
     }
+
+    @OnClick(R.id.demo_animating_state_changes)
+    protected void onDemoAnimatingStateChangesButtonClick() {
+        startActivity(AnimatingStateChangesActivity.class);
+    }
 }

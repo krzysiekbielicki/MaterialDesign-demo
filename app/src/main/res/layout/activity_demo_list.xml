@@ -58,6 +58,12 @@
             android:text="Touch Feedback"/>
 
         <Button
+            android:id="@+id/demo_animating_state_changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animating State Changes"/>
+
+        <Button
             android:id="@+id/demo_reveal_effect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
