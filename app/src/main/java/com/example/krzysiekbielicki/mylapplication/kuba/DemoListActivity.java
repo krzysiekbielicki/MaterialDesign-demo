@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.example.krzysiekbielicki.mylapplication.R;
 import com.example.krzysiekbielicki.mylapplication.kuba.recyclerview.RecyclerViewActivity;
+import com.example.krzysiekbielicki.mylapplication.kuba.transitions.TransitionsSmallGalleryActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -68,4 +69,9 @@ public class DemoListActivity extends Activity {
 	protected void onDemoRevealEffectButtonClick() {
 		startActivity(RevealEffectActivity.class);
 	}
+
+    @OnClick(R.id.demo_transitions)
+    protected void onDemoTransitionsButtonClick() {
+        startActivity(TransitionsSmallGalleryActivity.class);
+    }
 }

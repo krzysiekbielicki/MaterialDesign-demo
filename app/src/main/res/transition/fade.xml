@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- res/transition/move_image.xml -->
+<!-- res/transition/fade.xml -->
 <transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
-    <moveImage/>
+    <fade />
 </transitionSet>

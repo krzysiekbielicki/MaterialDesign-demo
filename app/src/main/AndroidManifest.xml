@@ -45,6 +45,14 @@
 
         <activity android:name=".kuba.RevealEffectActivity"
                   android:label="Reveal Effect"/>
+
+        <activity android:name=".kuba.transitions.TransitionsSmallGalleryActivity"
+            android:theme="@style/TransitionsTheme"
+            android:label="Small Gallery" />
+
+        <activity android:name=".kuba.transitions.TransitionsBigGalleryActivity"
+            android:theme="@style/TransitionsTheme"
+            android:label="Big Gallery" />
     </application>
 
 </manifest>

@@ -62,5 +62,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reveal Effect"/>
+
+        <Button
+            android:id="@+id/demo_transitions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transitions"/>
     </LinearLayout>
 </ScrollView>
